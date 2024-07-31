@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template 2</title>
+<style>
+    body {
+        font-size: xx-large;
+        box-sizing: border-box;
+    }
+    nav {
+        display: flex;
+        justify-content: center;        
+    }
+    nav ul {
+        width: 70%;
+        padding: 0%;
+        display: flex;
+        align-items: baseline;
+        border-bottom: 1px dotted black;
+        background-color: lightblue;
+    }
+    nav li {
+        display: inline-block;
+    }
+    nav li:first-child {
+        margin-right: 1rem;
+    }
+    nav li:last-of-type {
+        margin-left: auto;
+        margin-right: 1rem;        
+        font-size: x-large;
+    }
+    nav li a {
+        text-decoration: none;
+    }
+    nav img {
+        height: 80px;
+    }
+    .main-container {
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+        border: 1px solid black;
+        background-color: rgb(252, 137, 137);
+    }
+    main>h1 {
+        text-align: center;
+    }
+    form {
+        width: 80%;
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    input {
+        height: 50px;
+        width: 50%;
+        font-size: x-large;
+    }
+    *,
+    *::after,
+    *::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+    .button {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        z-index: 1;
+        cursor: pointer;
+        width: 100px;
+        font-size: x-large;
+    }
+    .button_1:hover {
+        color: white;
+        background-color: transparent;
+    }
+    .button_1:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;        
+        transform: translateX(-100px);
+        transition: transform 0.2s ease-out;
+        background-color: blue;        
+        z-index: -1;
+        transform-origin: bottom left;
+    }
+    
+    .button_1:hover::before {
+        transform: translateX(0px);
+    }
+    .secondary {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    section>h2 {
+        width: 70%;  
+        padding: 10px;  
+    }
+    section>aside {
+        background-color: rgb(252, 137, 137);
+        width: 20%;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section>article {
+        background-color: lightblue;
+        width: 50%;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        text-align: left;
+        padding: 7px;
+        font-size: x-large;
+    }
+    section img {        
+        height: 160px;
+        margin: 5px 0 5px 0;
+    }
+    @media screen and (max-width: 1280px) {
+        body {
+            font-size: large;
+        }
+        nav ul {
+            width: 100%;
+        }
+        main {
+            width: 100%;
+        }
+        form {
+        width: 80%;
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: center;
+        }
+        input {
+        height: 50px;
+        width: 70%;
+        font-size: large;
+        }
+        .button {
+            font-size: large;
+        }
+        section {
+        flex-direction: column;
+        width: 100%;
+        font-size: medium;
+        }
+        section>h2 {
+        width: 100%; 
+        font-size: xx-large;
+        }
+        section>aside {
+        width: 100%;
+        }
+        section>article {
+        width: 100%;
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 0px;
+        margin-top: 50px;
+    }
+    footer {
+        font-size: medium;
+        background-color: lightblue;
+        width: 70%;
+        text-align: center;
+    }
+    footer li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img src="logo1.png"/></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <main>
+            <h1>
+                Cerca il tuo personaggio Disney preferito!    
+            </h1>
+            <br>
+            <form action="#">
+                <input type="text" placeholder="Inserisci il nome del personaggio">
+                <button type="submit" class="button button_1">CERCA</button>
+            </form>            
+        </main>
+    </div>  
+    <div class="secondary">
+        <section>
+            <h2>I più amati</h2><br>
+        </section>
+        <section>
+            <aside>
+                <img src="topolino.png" alt="">
+            </aside>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus tortor in auctor maximus. Aliquam in vehicula metus. Quisque eu nibh purus. Nulla nec velit vel mi suscipit sodales in id enim. Etiam dolor massa, malesuada vitae dignissim quis, lacinia et sem. Maecenas egestas elementum sodales. Curabitur vitae vehicula enim, a condimentum est. Maecenas quam tellus, bibendum ut scelerisque vel, congue in magna.
+                </p>                
+            </article>
+        </section>
+        <section>
+            <aside>
+                <img src="paperino.png" alt="">
+            </aside>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus tortor in auctor maximus. Aliquam in vehicula metus. Quisque eu nibh purus. Nulla nec velit vel mi suscipit sodales in id enim. Etiam dolor massa, malesuada vitae dignissim quis, lacinia et sem. Maecenas egestas elementum sodales. Curabitur vitae vehicula enim, a condimentum est. Maecenas quam tellus, bibendum ut scelerisque vel, congue in magna.
+                </p>                   
+            </article>
+        </section>  
+        <section>
+            <aside>
+                <img src="pippo.png" alt="">
+            </aside>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus tortor in auctor maximus. Aliquam in vehicula metus. Quisque eu nibh purus. Nulla nec velit vel mi suscipit sodales in id enim. Etiam dolor massa, malesuada vitae dignissim quis, lacinia et sem. Maecenas egestas elementum sodales. Curabitur vitae vehicula enim, a condimentum est. Maecenas quam tellus, bibendum ut scelerisque vel, congue in magna.
+                </p>                   
+            </article>
+        </section>  
+        <section>
+            <aside>
+                <img src="pluto.png" alt="">
+            </aside>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus tortor in auctor maximus. Aliquam in vehicula metus. Quisque eu nibh purus. Nulla nec velit vel mi suscipit sodales in id enim. Etiam dolor massa, malesuada vitae dignissim quis, lacinia et sem. Maecenas egestas elementum sodales. Curabitur vitae vehicula enim, a condimentum est. Maecenas quam tellus, bibendum ut scelerisque vel, congue in magna.
+                </p>                   
+            </article>
+        </section> 
+    </div>
+    <div class="footer">
+        <footer>
+            <ul>
+                <li><a href="#">Terms&Privacy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </footer>
+    </div>    
+</body>
+
+<script>
+</script>
+
+</html>
